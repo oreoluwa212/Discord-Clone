@@ -1,9 +1,16 @@
 import React from "react";
+import { BrowserRouter,Route, Routes } from "react-router-dom";
+import './App.css'
 import discordLogo from "../assets/discord_main_logo.svg";
+import LandingPage from "../Pages/LandingPage";
 function App() {
   return (
-    <div style={{ backgroundColor: "#5865f2" }}>
-      <img src={discordLogo} alt="discord" />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
